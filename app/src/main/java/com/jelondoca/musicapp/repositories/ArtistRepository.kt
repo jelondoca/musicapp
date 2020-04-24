@@ -2,14 +2,15 @@ package com.jelondoca.musicapp.repositories
 
 import com.jelondoca.musicapp.models.ArtistModel
 import com.jelondoca.musicapp.services.ArtistService
-import com.jelondoca.musicapp.services.ServiceFactory
+import com.jelondoca.musicapp.services.factory.ServiceFactory
 import retrofit2.Call
 
 class ArtistRepository {
     private var artistService: ArtistService
 
     init {
-        val serviceFactory = ServiceFactory()
+        val serviceFactory =
+            ServiceFactory()
         artistService = serviceFactory.getInstanceArtistService()
     }
 

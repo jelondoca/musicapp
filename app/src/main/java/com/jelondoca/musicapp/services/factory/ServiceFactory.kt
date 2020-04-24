@@ -1,6 +1,9 @@
-package com.jelondoca.musicapp.services
+package com.jelondoca.musicapp.services.factory
 
 import com.google.gson.GsonBuilder
+import com.jelondoca.musicapp.services.AlbumService
+import com.jelondoca.musicapp.services.ArtistService
+import com.jelondoca.musicapp.services.SongService
 import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit
@@ -31,17 +34,17 @@ class ServiceFactory {
         return GsonConverterFactory.create(gson)
     }
 
-    fun getInstanceArtistService(): ArtistService{
+    fun getInstanceArtistService(): ArtistService {
         servicesFactory()
         return restAdapter!!.create(ArtistService::class.java)
     }
 
-    fun getInstanceAlbumService(): AlbumService{
+    fun getInstanceAlbumService(): AlbumService {
         servicesFactory()
         return restAdapter!!.create(AlbumService::class.java)
     }
 
-    fun getInstanceSongService(): SongService{
+    fun getInstanceSongService(): SongService {
         servicesFactory()
         return restAdapter!!.create(SongService::class.java)
     }
