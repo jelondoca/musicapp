@@ -6,9 +6,9 @@ import com.jelondoca.musicapp.listeners.SongListener
 import com.jelondoca.musicapp.models.SongModel
 import kotlinx.android.synthetic.main.item_song.view.*
 
-class SongHolder(private val view: View):RecyclerView.ViewHolder(view) {
+class SongHolder(private val view: View,private val listener: SongListener):RecyclerView.ViewHolder(view) {
 
-    fun bindSong(song: SongModel, listener: SongListener){
+    fun bindSong(song: SongModel){
         view.txtTitleSong.text = song.name
         view.txtDurationSong.text = calculateDuration(song.time)
         view.setOnClickListener{

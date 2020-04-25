@@ -14,12 +14,13 @@ class SongAdapter(private val data: List<SongModel>, private val listener: SongL
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongHolder {
         return SongHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_song, parent, false)
+            , listener
         )
     }
 
     override fun getItemCount(): Int = data.size
 
     override fun onBindViewHolder(holder: SongHolder, position: Int) {
-        holder.bindSong(data[position], listener)
+        holder.bindSong(data[position])
     }
 }

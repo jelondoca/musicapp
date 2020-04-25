@@ -9,9 +9,9 @@ import com.jelondoca.musicapp.listeners.AlbumListener
 import com.jelondoca.musicapp.models.AlbumModel
 import kotlinx.android.synthetic.main.item_album.view.*
 
-class AlbumHolder(private val view: View): RecyclerView.ViewHolder(view) {
+class AlbumHolder(private val view: View, private val listener: AlbumListener): RecyclerView.ViewHolder(view) {
 
-    fun bindAlbum(itemAlbumModel: AlbumModel, listener: AlbumListener) {
+    fun bindAlbum(itemAlbumModel: AlbumModel) {
         view.txtAlbumTitle.text = itemAlbumModel.name
 
         Glide.with(view.context).load(itemAlbumModel.image).into(view.imgAlbum)

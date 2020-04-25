@@ -24,7 +24,7 @@
                 android:id="@+id/imgArtist"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:transitionName="transactionArtistImage"
+                android:transitionName="transitionArtistImage"
                 android:scaleType="centerCrop"/>
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
@@ -34,7 +34,10 @@
                     android:id="@+id/nameArtist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:transitionName="transitionArtistName"/>
+                    android:transitionName="transitionArtistName"
+                    android:background="@color/colorPrimary"
+                    android:textStyle="bold|italic"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>

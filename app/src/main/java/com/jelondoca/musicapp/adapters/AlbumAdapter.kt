@@ -8,16 +8,18 @@ import com.jelondoca.musicapp.holders.AlbumHolder
 import com.jelondoca.musicapp.listeners.AlbumListener
 import com.jelondoca.musicapp.models.AlbumModel
 
-class AlbumAdapter(private val data: List<AlbumModel>, private val listener: AlbumListener):RecyclerView.Adapter<AlbumHolder>() {
+class AlbumAdapter(private val data: List<AlbumModel>, private val listener: AlbumListener) :
+    RecyclerView.Adapter<AlbumHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumHolder {
         return AlbumHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_album, parent, false)
+            , listener
         )
     }
 
     override fun getItemCount(): Int = data.size
 
     override fun onBindViewHolder(holder: AlbumHolder, position: Int) {
-        holder.bindAlbum(data[position], listener)
+        holder.bindAlbum(data[position])
     }
 }

@@ -10,9 +10,9 @@ import com.jelondoca.musicapp.models.ArtistModel
 import kotlinx.android.synthetic.main.item_artist.view.*
 import androidx.core.util.Pair
 
-class ArtistHolder(private val view: View):RecyclerView.ViewHolder(view){
+class ArtistHolder(private val view: View, private val listener: ArtistListener):RecyclerView.ViewHolder(view){
 
-    fun bindArtist(artist: ArtistModel, listener: ArtistListener){
+    fun bindArtist(artist: ArtistModel){
         Glide.with(view.context).load(artist.image).into(view.imgArtist)
         view.nameArtist.text = artist.name
         view.setOnClickListener{

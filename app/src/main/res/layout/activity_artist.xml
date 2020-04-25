@@ -23,10 +23,9 @@
                 android:id="@+id/nameApp"
                 android:layout_width="wrap_content"
                 android:text="@string/app_name"
-                android:textColor="@color/colorGray"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:paddingBottom="120dp"
-
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -35,39 +34,11 @@
                 android:text="Artistas"
                 android:paddingTop="200dp"
                 android:paddingLeft="150dp"
-                android:textColor="@color/colorGray"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold|italic"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_height="wrap_content"/>
         </androidx.appcompat.widget.Toolbar>
-
-        <!--<com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                app:layout_collapseMode="pin">
-                <TextView
-                    android:id="@+id/nameArtist"
-                    android:layout_width="wrap_content"
-                    android:text="MusicApp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:layout_height="wrap_content"/>
-            </androidx.appcompat.widget.Toolbar>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imgArtist"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
-
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>-->
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -77,6 +48,5 @@
         app:behavior_overlapTop="0dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/item_artist"/>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
